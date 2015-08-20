@@ -46,9 +46,13 @@ T leer(string nombre_archivo)
 //Nota: Los elementos tienen que estar el mismo orden.
 int* convertirAArreglo(list<int>lista)
 {
-
-
-    return NULL;
+    int* arreglo=new int[lista.size()];
+    int k=0;
+    for(list<int>::iterator j = lista.begin();j!=lista.end();j++){
+        arreglo[k]=*j;
+        k++;
+    }
+    return arreglo;
 }
 
 //Devuelve un vector ordenado de menor a mayor que contenga todo el contenido de v1 (dado) y v2 (dado).
